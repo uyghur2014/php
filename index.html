@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf8"></meta>
+	<title>تورماھىرى دەرسلىك ئامبىرى</title>
+	<link rel="stylesheet" href="css/wx.css" type="text/css" charset="utf-8">
+
+
+	<script src="js/wx.js" type="text/javascript" charset="utf-8"></script>
+
+	<link rel="stylesheet" type="text/css" href="css/samples.css">
+	<script src="data/testdata.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/libs/jquery-1.10.2.js"></script>
+	 <script type="text/javascript" src="js/fbase.js"></script>
+	 <script type="text/javascript" src="js/count.js"></script>
+	<script type="text/javascript">
+
+	var uqur = new Firebase('https://tormahiri.firebaseio.com/');
+	uqur.child('location').on('value', function(snapshot) {
+
+		$("a").click(function(){
+			var count=snapshot.val();
+			console.log(count);
+			uqur.set({
+
+				location:++count
+			});
+		})
+
+	});
+
+	
+	</script>
+</head>
+
+<body>
+	<center>
+
+		<div id="container">
+           <h2>سۈزۈك نۇسخا</h2>
+			<div class='header_comment'>دەرسلىك ئامبىرى <a href="/">قايتىش</a></div>
+			<div id="testA"></div>
+
+		</div>
+	</center>
+
+	<script type="text/javascript" charset="utf-8">
+
+
+	webix.ready(function(){
+
+		grid = new webix.ui({
+			container:"testA",
+			view:"datatable",
+			columns:[
+			{ id:"تەرتىپى"},
+			{ id:"title",	header:"ئىسمى" , 
+			template:"<a href='#down#' style='text-decoration:none'>#title#</a>",
+			width:300},
+			{ id:"turi",	header:"دەرسلىك تۈرى" , width:110}
+			],
+
+			autoheight:true,
+			autowidth:true,
+			data:small_film_set
+		});
+
+
+	});
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+
+@font-face {
+  font-family: 'ukij tuz tom';
+  src: url ('UKIJTuT.ttf')
+  local('UKIJTuT.ttf') format('truetype'); 
+     
+}
+ body{
+	height: 100%;
+	margin: 0 auto;
+
+
+}
+.rank .webix_cell, .rank.webix_hcell {
+	text-align:center;
+}
+.dummy_button{
+	margin-bottom:4px;
+	width:100%;
+}
+.sample_button{
+	width:250px;
+	display:block;
+	margin-left:20px;
+	margin-top:5px;
+}
+
+.padding_less .webix_cell{
+	padding:0px;
+	text-align:center;
+}
+.padding_less input{
+	height:20px;
+	width:80px;
+}
+.sample_comment{
+	font-family:ukij tuz tom;
+	font-size:12px;
+	margin:10px;
+}
+.header_comment{
+	font-family:ukij tuz tom;
+	font-weight:bold;
+	font-size:22px;
+	margin:18px 10px 20px 10px;
+}
+.header_comment>a{
+	margin-right: 40%;
+}
+.right_area.webix_column>div:nth-child(even){
+	background-color:#ffffdd;
+}
+.right_area.webix_column>div:nth-child(odd){
+	background-color:#ffffee;
+}
+.left_area.webix_column>div:nth-child(even){
+	background-color:#ffffdd;
+}
+.left_area.webix_column>div:nth-child(odd){
+	background-color:#ffffee;
+}
+
+.log_record{
+	font-family:ukij tuz tom;
+	font-size:12px;
+	margin:10px;	
+}
+
+#container{
+	margin-left:20px;
+	margin-top:10px;
+
+	border-radius: 11px;
+
+	width: 600px;
+
+ background:rgba(255,255,255,0.5);
+
+}
+a{
+	
+	
+  text-decoration: none;
+ 
+
+}
